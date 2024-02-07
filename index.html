@@ -35,54 +35,37 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
+	var CatCount = 0;
+	var DogCount = 0;
 	var exampleVariable3 = 0;
 	
-	function exampleFunction1()
+	function Cats()
 	{
 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+    		CatCount = CatCount +1;
+    	
 		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
+	
+	}
+	function Dogs()
+	{
+		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
+    		DogCount = DogCount +1;
 	}
 	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
 	
-	function exampleFunction3()
+	function ResultsFunction()
 	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
-	
-	function exampleResultsFunction()
-	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
+		var CatPercent = (CatCount / (CatCount + DogCount)) * 100;
+		var DogPercent = (DogCount / (CatCount + DogCount)) * 100;
+		document.getElementById("endResults").innerHTML = "Your final result is: " + CatPercent + "% of a Cat Personand " + DogPercent + "% of a Dog Person";
 		resetVariables();
 	}
 	
 	function resetVariables()
 	{
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
+		CatCount = 0;
+		DogCount = 0;
 		exampleVariable3 = 0;
 	}
 </script>
@@ -145,14 +128,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<!--Form element. This allows for user input in HTML.-->
 	<form>
-		<a href="#one" class="page" onclick="Cats();"> </a>
-		<a href="#one" class="page" onclick="Dogs();"> </a>
+		<a href="#two" class="page" onclick="Cats();"> </a>
+		<a href="#two" class="page" onclick="Dogs();"> </a>
 		
 		<br><br><br>
 	</form>
       
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
+  <a href="#finalpage" onclick="Cat();" class="w3-btn w3-grey">Yes</a>
+  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">No</a>
     
   </center>
 </div>  
