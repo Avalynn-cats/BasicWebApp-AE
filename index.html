@@ -42,23 +42,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function Cats()
 	{
 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		CatCount = CatCount +1;
-    	
-		
-	
+    		CatCount = CatCount + 1;
 	}
+	
 	function Dogs()
 	{
 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		DogCount = DogCount +1;
+    		DogCount = DogCount + 1;
 	}
-	
 	
 	function ResultsFunction()
 	{
 		var CatPercent = (CatCount / (CatCount + DogCount)) * 100;
 		var DogPercent = (DogCount / (CatCount + DogCount)) * 100;
-		document.getElementById("endResults").innerHTML = "Your final result is: " + CatPercent + "% of a Cat Personand " + DogPercent + "% of a Dog Person";
+		document.getElementById("endResults").innerHTML = "Your final result is: " + CatPercent.tofixed(2) + "% of a Cat Personand " + DogPercent.tofixed(2) + "% of a Dog Person";
 		resetVariables();
 	}
 	
